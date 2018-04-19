@@ -1,0 +1,300 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:zeabus
+LIBS:ftdi
+LIBS:zeabus-elec-hydrophone-frontend-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 4
+Title "LNA Gain Controller"
+Date "19 April 2018"
+Rev "1.0.0"
+Comp "Zeabus, Kasetsart University"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MAX5387LAUD+T U3
+U 1 1 599B0230
+P 5850 3750
+F 0 "U3" H 5668 4462 45  0000 L BNN
+F 1 "MAX5387LAUD+T" H 5567 2801 45  0000 L BNN
+F 2 "Housings_SSOP:TSSOP-14_4.4x5mm_Pitch0.65mm" H 5880 3900 20  0001 C CNN
+F 3 "" H 5850 3750 60  0001 C CNN
+	1    5850 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDA #PWR26
+U 1 1 599B078D
+P 7350 2300
+F 0 "#PWR26" H 7350 2050 50  0001 C CNN
+F 1 "GNDA" H 7350 2150 50  0000 C CNN
+F 2 "" H 7350 2300 50  0001 C CNN
+F 3 "" H 7350 2300 50  0001 C CNN
+	1    7350 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3VA #PWR25
+U 1 1 599B07B0
+P 8250 2050
+F 0 "#PWR25" H 8250 1900 50  0001 C CNN
+F 1 "+3.3VA" H 8250 2190 50  0000 C CNN
+F 2 "" H 8250 2050 50  0001 C CNN
+F 3 "" H 8250 2050 50  0001 C CNN
+	1    8250 2050
+	1    0    0    -1  
+$EndComp
+Text HLabel 6650 3350 2    60   BiDi ~ 0
+SDA
+Text HLabel 5000 3550 0    60   Input ~ 0
+SCL
+Wire Wire Line
+	7100 3550 6550 3550
+Wire Wire Line
+	7100 2150 7100 3850
+Wire Wire Line
+	7100 3850 6550 3850
+Connection ~ 7100 3550
+Wire Wire Line
+	6550 3750 7000 3750
+Wire Wire Line
+	7000 3750 7000 4050
+Wire Wire Line
+	7000 4050 6550 4050
+Text HLabel 6600 3650 2    60   Output ~ 0
+GAIN12
+Text HLabel 6600 3950 2    60   Output ~ 0
+GAIN34
+Wire Wire Line
+	6650 3350 6550 3350
+Wire Wire Line
+	6550 3650 6600 3650
+Wire Wire Line
+	6600 3950 6550 3950
+$Comp
+L GNDA #PWR29
+U 1 1 599B08BC
+P 7000 4050
+F 0 "#PWR29" H 7000 3800 50  0001 C CNN
+F 1 "GNDA" H 7000 3900 50  0000 C CNN
+F 2 "" H 7000 4050 50  0001 C CNN
+F 3 "" H 7000 4050 50  0001 C CNN
+	1    7000 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 4150 5150 4450
+$Comp
+L GNDD #PWR30
+U 1 1 599B08F3
+P 5150 4450
+F 0 "#PWR30" H 5150 4200 50  0001 C CNN
+F 1 "GNDD" H 5150 4300 50  0000 C CNN
+F 2 "" H 5150 4450 50  0001 C CNN
+F 3 "" H 5150 4450 50  0001 C CNN
+	1    5150 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR28
+U 1 1 599B0916
+P 5150 3150
+F 0 "#PWR28" H 5150 3000 50  0001 C CNN
+F 1 "+3.3V" H 5150 3290 50  0000 C CNN
+F 2 "" H 5150 3150 50  0001 C CNN
+F 3 "" H 5150 3150 50  0001 C CNN
+	1    5150 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 3550 5000 3550
+Connection ~ 5150 4350
+$Comp
+L R R18
+U 1 1 599B09B7
+P 4100 4200
+F 0 "R18" V 4180 4200 50  0000 C CNN
+F 1 "10k" V 4100 4200 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 4030 4200 50  0001 C CNN
+F 3 "" H 4100 4200 50  0001 C CNN
+	1    4100 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R19
+U 1 1 599B0A0B
+P 4300 4200
+F 0 "R19" V 4380 4200 50  0000 C CNN
+F 1 "10k" V 4300 4200 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 4230 4200 50  0001 C CNN
+F 3 "" H 4300 4200 50  0001 C CNN
+	1    4300 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R20
+U 1 1 599B0A34
+P 4500 4200
+F 0 "R20" V 4580 4200 50  0000 C CNN
+F 1 "10k" V 4500 4200 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 4430 4200 50  0001 C CNN
+F 3 "" H 4500 4200 50  0001 C CNN
+	1    4500 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R14
+U 1 1 599B0A64
+P 4100 3400
+F 0 "R14" V 4180 3400 50  0000 C CNN
+F 1 "0" V 4100 3400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 4030 3400 50  0001 C CNN
+F 3 "" H 4100 3400 50  0001 C CNN
+	1    4100 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R15
+U 1 1 599B0AA0
+P 4300 3400
+F 0 "R15" V 4380 3400 50  0000 C CNN
+F 1 "0" V 4300 3400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 4230 3400 50  0001 C CNN
+F 3 "" H 4300 3400 50  0001 C CNN
+	1    4300 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R16
+U 1 1 599B0ACE
+P 4500 3400
+F 0 "R16" V 4580 3400 50  0000 C CNN
+F 1 "0" V 4500 3400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 4430 3400 50  0001 C CNN
+F 3 "" H 4500 3400 50  0001 C CNN
+	1    4500 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 4350 5150 4350
+Connection ~ 4300 4350
+Connection ~ 4500 4350
+Wire Wire Line
+	4100 3550 4100 4050
+Wire Wire Line
+	4300 4050 4300 3550
+Wire Wire Line
+	4500 3550 4500 4050
+Wire Wire Line
+	4100 3250 5150 3250
+Connection ~ 4300 3250
+Wire Wire Line
+	5150 3150 5150 3350
+Connection ~ 4500 3250
+Connection ~ 5150 3250
+Wire Wire Line
+	5150 3750 4500 3750
+Connection ~ 4500 3750
+Wire Wire Line
+	5150 3850 4300 3850
+Connection ~ 4300 3850
+Wire Wire Line
+	5150 3950 4100 3950
+Connection ~ 4100 3950
+Text Notes 1950 3050 0    60   ~ 12
+Short any of these R to generate logic 1 to the coresponding pin.\nDefault is all-short making the chip address as 0x5E.
+Wire Notes Line
+	3600 3150 4700 3150
+Wire Notes Line
+	4700 3150 4700 3600
+Wire Notes Line
+	4700 3600 3600 3600
+Wire Notes Line
+	3600 3600 3600 3150
+$Comp
+L TLV733 U2
+U 1 1 599B876C
+P 8050 2050
+F 0 "U2" H 8150 2100 60  0000 C CNN
+F 1 "TLV73311PDBVT" H 8200 1650 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-5" H 8050 2100 60  0001 C CNN
+F 3 "" H 8050 2100 60  0001 C CNN
+	1    8050 2050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 2150 7350 2150
+Wire Wire Line
+	8250 2050 8250 2300
+Connection ~ 8250 2150
+$Comp
+L R R17
+U 1 1 599D7AE3
+P 5050 3400
+F 0 "R17" V 5130 3400 50  0000 C CNN
+F 1 "10k" V 5050 3400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 4980 3400 50  0001 C CNN
+F 3 "" H 5050 3400 50  0001 C CNN
+	1    5050 3400
+	1    0    0    -1  
+$EndComp
+Connection ~ 5050 3550
+Connection ~ 5050 3250
+$Comp
+L R R13
+U 1 1 599D7B87
+P 6600 3200
+F 0 "R13" V 6680 3200 50  0000 C CNN
+F 1 "10k" V 6600 3200 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 6530 3200 50  0001 C CNN
+F 3 "" H 6600 3200 50  0001 C CNN
+	1    6600 3200
+	1    0    0    -1  
+$EndComp
+Connection ~ 6600 3350
+$Comp
+L +3.3V #PWR27
+U 1 1 599D7C09
+P 6600 3050
+F 0 "#PWR27" H 6600 2900 50  0001 C CNN
+F 1 "+3.3V" H 6600 3190 50  0000 C CNN
+F 2 "" H 6600 3050 50  0001 C CNN
+F 3 "" H 6600 3050 50  0001 C CNN
+	1    6600 3050
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
