@@ -129,17 +129,6 @@ F 3 "" H 2100 4500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Conn_01x08 J1
-U 1 1 5AD92CAB
-P 3150 4300
-F 0 "J1" H 3150 4700 50  0000 C CNN
-F 1 "Conn_R1" H 3150 3800 50  0000 C CNN
-F 2 "" H 3150 4300 50  0001 C CNN
-F 3 "" H 3150 4300 50  0001 C CNN
-	1    3150 4300
-	-1   0    0    -1  
-$EndComp
-$Comp
 L Conn_01x08 J3
 U 1 1 5AD92D7F
 P 3150 5300
@@ -171,9 +160,9 @@ Text Label 1600 5400 0    60   ~ 0
 ADC2
 Text Label 1600 5500 0    60   ~ 0
 ADC3
-Text Label 1600 5600 0    60   ~ 0
+Text Label 3600 3900 2    60   ~ 0
 SDA
-Text Label 1600 5700 0    60   ~ 0
+Text Label 3600 3800 2    60   ~ 0
 SCL
 Wire Wire Line
 	1600 5200 1900 5200
@@ -183,10 +172,6 @@ Wire Wire Line
 	1600 5400 1900 5400
 Wire Wire Line
 	1900 5500 1600 5500
-Wire Wire Line
-	1600 5600 1900 5600
-Wire Wire Line
-	1900 5700 1600 5700
 $Comp
 L GNDA #PWR3
 U 1 1 5AD94E9E
@@ -255,4 +240,19 @@ Wire Wire Line
 	5950 4000 6500 4000
 Wire Wire Line
 	6500 3500 5950 3500
+$Comp
+L Conn_01x10 J1
+U 1 1 5AD972E3
+P 3150 4200
+F 0 "J1" H 3150 4700 50  0000 C CNN
+F 1 "Conn_R1" H 3150 3600 50  0000 C CNN
+F 2 "" H 3150 4200 50  0001 C CNN
+F 3 "" H 3150 4200 50  0001 C CNN
+	1    3150 4200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 3800 3600 3800
+Wire Wire Line
+	3600 3900 3350 3900
 $EndSCHEMATC
