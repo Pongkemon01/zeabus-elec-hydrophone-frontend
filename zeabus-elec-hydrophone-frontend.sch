@@ -28,7 +28,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:zeabus
 LIBS:ftdi
 LIBS:zeabus-elec-hydrophone-frontend-cache
 EELAYER 25 0
