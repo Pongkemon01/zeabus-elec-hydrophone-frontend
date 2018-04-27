@@ -1,4 +1,4 @@
-update=Thursday, 19 April 2018 'pmt' 19:48:07
+update=Thursday, 26 April 2018 'amt' 07:14:20
 version=1
 last_client=kicad
 [pcbnew]
@@ -60,3 +60,13 @@ LibName30=zeabus
 LibName31=ftdi
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
